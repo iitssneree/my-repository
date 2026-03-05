@@ -1,0 +1,19 @@
+Comandos para Git Bush (Para subir y bajar los cambios a GitHub)
+
+1. git clone
+2. git add (1/2 veces)
+3. nano
+4. git status 
+5. git commit -m (Mensaje)
+6. git push (subir) git bull (bajar)
+
+Comandos útiles:
+
+pwd - Muestra el directorio actual.
+ls -al - Muestra lista de ficheros en el directorio actual.
+clear - Limpia la pantalla.
+cd <dirname> - Cambia al directorio deseado.
+cd .. - Cambia al directorio superior.
+mkdir <dirname> - Crea un nuevo directorio.
+touch <filename> - Crea un fichero nuevo.
+rm <filename> - Borra el fichero.
