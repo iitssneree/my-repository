@@ -6,6 +6,7 @@ Comandos para Git Bush (Para subir y bajar los cambios a GitHub)
 4. git status 
 5. git commit -m (Mensaje)
 6. git push (subir) git bull (bajar)
+7. git fetch && git pull (traerme los cambios después de un push)
 
 Comandos útiles:
 
