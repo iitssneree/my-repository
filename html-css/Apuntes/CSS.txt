@@ -1,0 +1,86 @@
+CSS
+
+Tiene tres partes: selector, propiedad y valor.
+
+Selectores:
+
+Indican qué elementos HTML serán afectados.
+
+Ejemplos: p, .clase, #id, a:hover
+
+Tipos de selectores básicos:
+
+Etiquetas p {color: red;}
+Clase .highlight { font-weigth: bold; }
+ID #header { background: #007EBD; }
+
+Selectores combinados:
+
+Descendiente div p { margin: 10px; }
+Hijo directo ul > li { list-style: none; }
+
+Propiedades:
+
+Características específicas que se pueden modificar.
+
+Ejemplos: color, font-size, margin, padding.
+
+Color y fondo:
+
+color (color de texto) background (color o imagen de fondo)
+
+Tipografía:
+
+font-family (tipo de letra) font-size (tamaño de texto)
+
+Dimensiones:
+
+width (ancho del elemento) height (alto del elemento)
+
+Valores:
+
+Especifican cómo se modificará la propiedad.
+
+Ejemplos: red, 16px, 2em, 50%.
+
+Jerarquía de los estilos.
+
+Orden de prioridad (menor a mayor):
+
+Estilos del navegador  2. Estilos externos (archivo.css)  3. Estilos internos (<style>)
+4. Estilos en línea (style= "")  5. Especificidad (etiquetas baja, clases media, IDs alta, estilos en línea
+muy alta)  6. Regla !important
+
+Tablas básicas:
+
+border Añade bordes a celdas y tabla.
+border-collapse Une bordes o los separa.
+padding Espacio interno en las celdas.
+background-color Color de fondo.
+
+Content (width, height) Dimensiones del contenido.
+Margin (margin) Espacio externo que separa el elemento de otros.
+box-sizing Controla cómo se calcucan las Dimensiones. ( content-box /
+border-box)
+
+Layout (Display y overflow)
+
+Display Controla cómo se muestra un elemento y cómo afecta al flujo
+del documento.
+
+block Ocupa todo el ancho disponible y empieza en línea nueva.
+inline Solo ocupa el espacio necesario y no rompe la línea.
+inline-block Se comporta como inline pero permite definir ancho y
+alto.
+flex Activa un contenedor flexible para distribuir elementos.
+grid Crea un sistema de filas y columnas para maquetación avanzada.
+none Oculta el elemento y no ocupa espacio.
+
+Overflow Determina qué ocurre cuando el contenido se desborda del
+contenedor.
+
+visible El contenido que sobresale se muestra sin recorte.
+hidden El contenido que se sale se oculta.
+scroll Siempre muestra barras de desplazamiento.
+auto Muestra barras solo si son necesarias.
+

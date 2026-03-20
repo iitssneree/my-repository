@@ -1,0 +1,105 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0e6f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5a447a;
+    text-align: center;
+    font-size: 3.5em;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 10px;
+}
+
+#artista {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    border-left: 5px solid #5a447a;
+    padding-left: 15px;
+}
+
+.imagen-artista {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.seccion {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.albumes {
+    background-color: #fff9e6;
+}
+
+.canciones {
+    background-color: #e6f3ff;
+}
+
+.tabla-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-info th {
+    background-color: #5a447a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-info td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.tabla-info tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-info tr:hover {
+    background-color: #e8f4f8;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #5a447a;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #d4af37;
+    transform: scale(1.05);
+}
+
+.reseña {
+    font-style: italic;
+    border-left: 4px solid #5a447a;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .image-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-holder img {
+            max-width: 400px;
+            max-height: 400px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery-container">
+        <div class="image-holder">
+            <img src="https://picsum.photos/600/200" alt="">
+        </div>
+        <div class="image-holder">
+            <img src="https://picsum.photos/200/500" alt="">
+        </div>
+        <div class="image-holder">
+            <img src="https://picsum.photos/400/400" alt="">
+        </div>
+        <div class="image-holder">
+            <img src="https://picsum.photos/800/300" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>

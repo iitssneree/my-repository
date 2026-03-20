@@ -1,0 +1,65 @@
+HTML <!DOCTYPE html>
+
+Etiquetas principales:
+
+<head> Contiene metadatos, enlaces a estilos, scripts, título.
+<body> Contiene el contenido visible de la página.
+
+Comentarios:
+
+Se usan para dejar notas en el código sin que se muestren en el
+navegador.
+<!-- Esto es un comentario -->
+
+Etiquetas de texto:
+
+<h1> … <h6> Títulos y subtítulos.
+<p> Párrafos.
+<span> Texto en línea.
+<br> Salto de línea.
+<hr> Línea horizontal.
+
+Listas:
+
+(u1) Lista no ordenada.
+(o1) Lista ordenada.
+<li> Palabras dentro de la lista.
+
+Enlaces:
+
+<a> Enlace interno o externo.
+
+Tablas principales:
+
+<table> Contenedor de la tabla.
+<tr> Fila.
+<th> Celda de encabezado.
+<td> Celda de datos.
+<thead> Encabezado de la tabla.
+<tbody> Cuerpo de la tabla.
+
+Colspan y rowspan:
+
+colspan Una celda ocupa varias columnas.
+rowspan Una celda ocupa varias filas.
+
+Imágenes:
+
+<img src="(Link imagen)" />
+<img src="(Link imagen)" alt="texto" Si la imagen no se muestra. />
+<img src="(nombre de la imagen descargada)" alt="texto" />
+
+Posicionamiento:
+
+position Controla cómo se coloca un elemento en la página y cómo interactúa con el flujo normal del documento.
+
+Valores principales:
+
+static Comportamiento por defecto, el elemento sigue el flujo normal, sin desplazamiento manual.
+relative Mantiene su espacio en el flujo, puede moverse respecto a su posición original (top, left, ect).
+absolute Sale del flujo normal, se posiciona respecto al contenedor posicionado más cercano.
+fixed Fijo en pantalla aunque se haga scroll, se posiciona respecto a la ventana del navegador.
+sticky Se comporta como relative hasta que se alcanza un punto, donde pasa a ser fijo.
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera tabla</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px 20px;
+            font-family: sans-serif;
+        }
+
+        th {
+            background-color: yellow;
+        }
+
+        .resaltado-maria {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Carlos</td>
+                <td>Pérez</td>
+            </tr>
+            <tr>
+                <td class="resaltado-maria">Maria</td>
+                <td>González</td>
+            </tr>
+            <tr>
+                <td>Jordi</td>
+                <td>Rovira</td>
+            </tr>
+            <tr>
+                <td>Laura</td>
+                <td>Sánchez</td>
+            </tr>
+            <tr>
+                <td>Pablo</td>
+                <td>López</td>
+            </tr>
+            <tr>
+                <td>Sofia</td>
+                <td>Ruiz</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

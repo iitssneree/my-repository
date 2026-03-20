@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Red Social</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 500px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .inline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: normal;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Registro en Red Social Imaginaria</h1>
+
+    <form>
+        <section>
+            <h2>Datos personales</h2>
+            <div>
+                <label>Nombre completo:</label>
+                <input type="text" name="nombre_completo">
+            </div>
+            <div>
+                <label>Nombre de usuario:</label>
+                <input type="text" name="usuario">
+            </div>
+            <div>
+                <label>Correo electrónico:</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label>Fecha de nacimiento (dd/mm/aaaa):</label>
+                <input type="text" name="nacimiento" placeholder="dd//aaaa">
+            </div>
+            <div>
+                <label>Color favorito:</label>
+                <input type="text" name="color">
+            </div>
+        </section>
+
+        <section>
+            <h2>Seguridad</h2>
+            <div>
+                <label>Contraseña:</label>
+                <input type="password" name="password">
+            </div>
+            <div>
+                <label>Confirmar contraseña:</label>
+                <input type="password" name="confirm_password">
+            </div>
+        </section>
+
+        <section>
+            <h2>Preferencias</h2>
+
+            <label>Género:</label>
+            <div class="inline"><input type="radio" name="genero" value="M"> Masculino</div>
+            <div class="inline"><input type="radio" name="genero" value="F"> Femenino</div>
+            <div class="inline"><input type="radio" name="genero" value="N"> Prefiero no decirlo</div>
+
+            <label style="margin-top:15px;">Hobbies:</label>
+            <div class="inline"><input type="checkbox" name="hobby" value="musica"> Música</div>
+            <div class="inline"><input type="checkbox" name="hobby" value="deportes"> Deportes</div>
+            <div class="inline"><input type="checkbox" name="hobby" value="tecnologia"> Tecnología</div>
+            <div class="inline"><input type="checkbox" name="hobby" value="lectura"> Lectura</div>
+            <div class="inline"><input type="checkbox" name="hobby" value="otros"> Otros</div>
+
+            <div style="margin-top:15px;">
+                <label>Ciudad:</label>
+                <select name="ciudad">
+                    <option value="">Selecciona una ciudad</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="mexico">Ciudad de México</option>
+                    <option value="bogota">Bogotá</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sobre ti</h2>
+            <label>Cuéntanos algo sobre ti:</label>
+            <textarea name="bio" rows="4"></textarea>
+        </section>
+
+        <div class="buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetear</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
