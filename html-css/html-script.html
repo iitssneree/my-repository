@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables JS - Neon Edition</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0d1117; /* Fondo oscuro tipo GitHub */
+            color: #e6edf3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background-color: #161b22;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #30363d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 { margin-top: 0; color: #58a6ff; } /* Azul brillante */
+        p.subtitle { color: #8b949e; font-size: 14px; }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #21262d;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid #238636; /* Verde neón */
+        }
+
+        .tag {
+            background-color: rgba(56, 139, 253, 0.15);
+            color: #58a6ff;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .card-title { font-weight: bold; font-size: 14px; color: #f0f6fc; }
+        .card-value { color: #79c0ff; font-family: monospace; font-size: 16px; margin-top: 5px; }
+
+        .console-box {
+            background-color: #010409;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+        }
+
+        .console-header {
+            background-color: #161b22;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #8b949e;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .console-body {
+            padding: 25px;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            line-height: 1.6;
+        }
+
+        .code-line { color: #d2a8ff; } /* Morado para el comando */
+        .output-line { color: #aff5b4; margin-top: 10px; } /* Verde suave para el resultado */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Variables utilizadas</h2>
+        <p class="subtitle">Datos cargados en el script actual.</p>
+        
+        <div class="cards-container">
+            <div class="card" style="border-left-color: #bc8cff;">
+                <span class="tag">Constante</span>
+                <div class="card-title">Nombre</div>
+                <div class="card-value">Nerea</div>
+            </div>
+            <div class="card" style="border-left-color: #3fb950;">
+                <span class="tag">Variable numérica</span>
+                <div class="card-title">Edad</div>
+                <div class="card-value">21</div>
+            </div>
+            <div class="card" style="border-left-color: #d29922;">
+                <span class="tag">Variable booleana</span>
+                <div class="card-title">Gusto por programar</div>
+                <div class="card-value">true</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Vista tipo consola</h2>
+        <p class="subtitle">Resultado de la ejecución del script.</p>
+        
+        <div class="console-box">
+            <div class="console-header">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+                <span style="margin-left: 10px;">bash — node index.js</span>
+            </div>
+            <div class="console-body">
+                <div class="code-line">> console.log(finalMessage);</div>
+                <div class="output-line" id="console-output"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const nombre = "Alba";
+        let edad = 30;
+        let leGustaProgramar = true;
+
+        const finalMessage = `Hola, mi nombre es Nerea, tengo 21 años y me gusta programar.`;
+
+        console.log(finalMessage);
+        document.getElementById('console-output').innerText = `"${finalMessage}"`;
+    </script>
+
+</body>
+</html>
