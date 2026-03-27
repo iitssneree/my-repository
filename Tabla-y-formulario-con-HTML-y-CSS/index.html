@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla y Formulario - Bootcamp Eurofirms</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <h1 class="page-title">Directorio de usuarios</h1>
+        <main class="layout-container">
+            <section class="panel panel-left" aria-labelledby="tabla-title">
+                <h2 id="tabla-title">Listado de usuarios</h2>
+                <table>
+                    <caption>
+                        Tabla de ejemplo de usuarios registrados
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>Género</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carlos Ruiz</td>
+                            <td>carlos.ruiz@example.com</td>
+                            <td>1985-03-15</td>
+                            <td>Masculino</td>
+                        </tr>
+                        <tr>
+                            <td>Elena Belmonte</td>
+                            <td>elena.b@example.com</td>
+                            <td>1994-08-12</td>
+                            <td>Femenino</td>
+                        </tr>
+                        <tr>
+                            <td>Sofía Vega</td>
+                            <td>sofia.vega@example.com</td>
+                            <td>1999-01-30</td>
+                            <td>Femenino</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="panel panel-right" aria-labelledby="formulario-title">
+                <h2 id="formulario-title">Registro de usuario</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Nombre completo" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha de nacimiento</label>
+                        <input type="date" id="fecha" name="fecha" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Género</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">Selecciona</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
