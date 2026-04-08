@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos para que se vea más bonito */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f7f6; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #btn {
+            background-color: #007bff; 
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px; 
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+
+        /* Efecto cuando pasas el ratón */
+        #btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); /* El botón sube un poquito */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Efecto cuando haces clic */
+        #btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Click here</button>
+
+    <script>
+        function onClick() {
+            alert('Button clicked');
+        }
+
+        let btnEl = document.getElementById('btn');
+        // console.log(btnEl, typeof btnEl);
+        btnEl.addEventListener('click', onClick);
+    </script>
+
+</body>
+</html>

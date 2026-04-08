@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador al Salir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales para centrar todo en la pantalla */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f7f6; /* Un color de fondo suave */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedor-contador {
+            text-align: center;
+        }
+
+        /* Título opcional para dar contexto */
+        .titulo {
+            color: #555;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        /* Estilos específicos para el cuadrado (como en la imagen, pero mejorado) */
+        .cuadrado {
+            width: 250px;
+            height: 150px;
+            background-color: #ffffff;
+            /* Borde más fino y de color gris oscuro para un aspecto más limpio */
+            border: 2px solid #333; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+            /* Sombra suave para dar profundidad */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            
+            /* Bordes ligeramente redondeados (opcional, quítalo si quieres esquinas afiladas) */
+            border-radius: 8px;
+
+            /* Transición suave al pasar el ratón */
+            transition: all 0.3s ease;
+        }
+
+        /* Efecto visual al pasar el ratón (hover) */
+        .cuadrado:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+            border-color: #007bff; /* Cambia el color del borde a azul */
+        }
+
+        /* Estilos para el número dentro del cuadrado */
+        #numero {
+            font-size: 64px;
+            font-weight: 700;
+            color: #333;
+            /* Evita que el usuario seleccione el texto al hacer clic */
+            user-select: none;
+            transition: color 0.3s ease;
+        }
+
+        /* El número cambia de color al hover del padre */
+        .cuadrado:hover #numero {
+            color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-contador">
+        <h1 class="titulo">Pasa el ratón y sal para contar</h1>
+        <div class="cuadrado" id="miCuadrado">
+            <span id="numero">0</span>
+        </div>
+    </div>
+
+    <script>
+        // Seleccionamos los elementos HTML
+        const cuadrado = document.getElementById('miCuadrado');
+        const numeroElemento = document.getElementById('numero');
+
+        // Inicializamos el contador
+        let contador = 0;
+
+        // Añadimos el evento 'mouseleave' (cuando el ratón sale)
+        cuadrado.addEventListener('mouseleave', () => {
+            // Incrementamos el contador
+            contador++;
+            
+            // Actualizamos el número visible en el HTML
+            numeroElemento.textContent = contador;
+        });
+    </script>
+
+</body>
+</html>
