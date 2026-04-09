@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla Dinámica</title>
+    <style>
+        table { width: 50%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        button { padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Lista de Usuarios</h2>
+
+    <table id="miTabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>García</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>Pérez</td>
+            </tr>
+            <tr>
+                <td>Marta</td>
+                <td>López</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <button onclick="agregarFila()">Añadir Fila</button>
+
+    <script>
+        function agregarFila() {
+            // 1. Referencia a la tabla (específicamente al tbody)
+            const tabla = document.getElementById("miTabla").getElementsByTagName('tbody')[0];
+
+            // 2. Crear un <tr>
+            const nuevaFila = document.createElement("tr");
+
+            // 3. Crear los dos <td> e insertarlos al <tr>
+            const celdaNombre = document.createElement("td");
+            celdaNombre.textContent = "Carlos"; // Dato de ejemplo
+
+            const celdaApellido = document.createElement("td");
+            celdaApellido.textContent = "Rodríguez"; // Dato de ejemplo
+
+            nuevaFila.appendChild(celdaNombre);
+            nuevaFila.appendChild(celdaApellido);
+
+            // 4. Insertar el <tr> al final de la tabla
+            tabla.appendChild(nuevaFila);
+        }
+    </script>
+
+</body>
+</html>

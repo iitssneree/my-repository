@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generación Dinámica de Divs</title>
+    <style>
+        /* Estilo general para imitar la imagen */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0 0 20px 0;
+        }
+
+        .texto-simple {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* El primer div (el contenedor con ID) */
+        #contenedor-principal {
+            border: 1px solid red;
+            padding: 2px;
+            font-size: 24px;
+            width: fit-content; /* Para que el borde se ajuste al texto */
+            min-width: 400px;
+        }
+
+        /* Estilo para el div que crearemos con JS */
+        .div-azul {
+            border: 1px solid blue;
+            margin-top: 2px;
+            padding: 2px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Title</h1>
+    <div class="texto-simple">Hello world</div>
+
+    <div id="contenedor-principal">
+        This is a new dynamic div 999
+    </div>
+
+    <script>
+        // --- PARTE DINÁMICA CON JAVASCRIPT ---
+
+        // 2. Seleccionamos el div padre por su ID
+        const padre = document.getElementById('contenedor-principal');
+
+        // 3. Creamos el nuevo div desde cero
+        const nuevoDiv = document.createElement('div');
+
+        // 4. Le añadimos el texto "Hola" y la clase para el borde azul
+        nuevoDiv.textContent = 'Hola';
+        nuevoDiv.className = 'div-azul';
+
+        // 5. Lo insertamos dentro del div rojo
+        padre.appendChild(nuevoDiv);
+    </script>
+
+</body>
+</html>
