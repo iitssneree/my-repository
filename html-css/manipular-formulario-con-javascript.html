@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios + JS</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #767676;
+            width: 250px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #efefef;
+            border: 1px solid #767676;
+            border-radius: 2px;
+        }
+        button:active {
+            background-color: #d5d5d5;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formularios + JS</h1>
+
+    <form id="miFormulario">
+        <input type="text" id="campoTexto" placeholder="">
+        <button type="submit" id="btnEnviar">Send!</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        // 1. Capturamos los elementos del DOM
+        const formulario = document.getElementById('miFormulario');
+        const input = document.getElementById('campoTexto');
+        const resultado = document.getElementById('resultado');
+
+        // 2. Escuchamos el evento 'submit'
+        formulario.addEventListener('submit', function(event) {
+            // Evitamos que la página se recargue (comportamiento por defecto)
+            event.preventDefault();
+
+            // 3. Manipulamos los datos
+            const valor = input.value;
+
+            if (valor.trim() === "") {
+                resultado.textContent = "⚠️ Por favor, escribe algo antes de enviar.";
+                resultado.style.color = "red";
+            } else {
+                resultado.textContent = `✅ Has enviado: ${valor}`;
+                resultado.style.color = "green";
+                
+                // Opcional: Limpiar el campo después de enviar
+                input.value = "";
+            }
+        });
+    </script>
+
+</body>
+</html>
