@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validación de Formulario</title>
+</head>
+
+<body>
+
+    <h2>Validación de Rango (10 - 20)</h2>
+
+    <form id="miFormulario">
+        <label for="numeroInput">Introduce un número:</label>
+        <input type="text" id="numeroInput" placeholder="Ej: 15">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script>
+    const formulario = document.getElementById('miFormulario');
+
+    formulario.addEventListener('submit', function (event) {
+
+        event.preventDefault();
+
+        const valor = document.getElementById('numeroInput').value;
+
+        const numero = parseFloat(valor);
+
+        if (isNaN(numero)) {
+            console.error("Error: El valor introducido no es un número.");
+        }
+        else if (numero < 10 || numero > 20) {
+            console.warn("Error: El número debe estar entre 10 y 20.");
+        }
+        else {
+            console.log("Validación exitosa. El número introducido es: " + numero);
+        }
+    });
+</script>
