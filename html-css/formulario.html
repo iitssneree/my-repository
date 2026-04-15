@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+            min-height: 1.2em;
+        }
+
+        input {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="miFormulario">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username">
+
+        <p id="error-username" class="error"></p>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        const form = document.querySelector("#miFormulario");
+        const errorUsernameEl = document.querySelector("#error-username");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            errorUsernameEl.textContent = "";
+
+            const usernameValue = form.elements.username.value.trim();
+
+            if (usernameValue === "") {
+                errorUsernameEl.textContent = "El nombre es obligatorio";
+            } else {
+                alert("Formulario enviado con éxito: " + usernameValue);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

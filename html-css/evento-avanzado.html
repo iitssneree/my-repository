@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Avanzados</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: serif;
+        }
+
+        .container {
+            background-color: #fce4ec;
+            border: 1px solid black;
+            padding: 50px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .blue {
+            background-color: #bbdefb;
+        }
+
+        .green {
+            background-color: #a5d6a7;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container" class="container">
+        <div id="item-a" class="box blue">
+            div with id:item-a
+        </div>
+        
+        <div id="item-b" class="box green">
+            div with id:item-b
+        </div>
+    </div>
+
+    <script>
+        const itemA = document.getElementById('item-a');
+        const itemB = document.getElementById('item-b');
+        const container = document.getElementById('main-container');
+
+        itemA.addEventListener('click', () => {
+            console.log('Click en item-a');
+        });
+
+        itemB.addEventListener('click', () => {
+            console.log('Click en item-b');
+        });
+
+        container.addEventListener('click', (e) => {
+            if(e.target === container) {
+                console.log('Click en el contenedor principal');
+            }
+        });
+    </script>
+</body>
+</html>
