@@ -1,79 +1,97 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos Avanzados</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: serif;
-        }
-
-        .container {
-            background-color: #fce4ec;
-            border: 1px solid black;
-            padding: 50px;
-            display: flex;
-            gap: 40px;
-        }
-
-        .box {
-            width: 200px;
-            height: 200px;
-            border: 1px solid black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-
-        .blue {
-            background-color: #bbdefb;
-        }
-
-        .green {
-            background-color: #a5d6a7;
-        }
-    </style>
+    <title>Eventos avanzados</title>
 </head>
-<body>
 
-    <div id="main-container" class="container">
-        <div id="item-a" class="box blue">
-            div with id:item-a
+<body>
+    <div class="container">
+        <div class="item" id="item-a">
+            div with id: <code>item-a</code>
         </div>
-        
-        <div id="item-b" class="box green">
-            div with id:item-b
+        <div class="item" id="item-b">
+            div with id <code>item-b</code>
+        </div>
+        <div class="item" id="item-c">
+            div with id <code>item-c</code>
+        </div>
+        <div class="item" id="item-d">
+            div with id <code>item-d</code>
         </div>
     </div>
-
-    <script>
-        const itemA = document.getElementById('item-a');
-        const itemB = document.getElementById('item-b');
-        const container = document.getElementById('main-container');
-
-        itemA.addEventListener('click', () => {
-            console.log('Click en item-a');
-        });
-
-        itemB.addEventListener('click', () => {
-            console.log('Click en item-b');
-        });
-
-        container.addEventListener('click', (e) => {
-            if(e.target === container) {
-                console.log('Click en el contenedor principal');
-            }
-        });
-    </script>
 </body>
+
 </html>
+
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+        gap: 100px;
+        border: 1px solid black;
+        justify-content: center;
+        margin: 40px auto;
+        background-color: #fad7ef;
+    }
+
+    .item {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 80px 0px;
+    }
+
+    #item-a {
+        background-color: #b1cff2;
+    }
+
+    #item-b {
+        background-color: #9fe09e;
+    }
+
+    #item-c {
+        background-color: #e090af;
+    }
+
+    #item-d {
+        background-color: #dbe94a;
+    }
+</style>
+
+<script>
+    document.querySelector('.container').addEventListener('click', (ev) => {
+
+        console.log("Click target: ", ev.target)
+
+        if (ev.target.classList.contains('container')) {
+            console.log('Parent container clicked');
+
+            let children = Array.from(ev.target.children);
+            console.log(' -> Listado de hijos:');
+
+            children.forEach((child, index) => {
+                console.log(`${index + 1}. ID: ${child.id}`);
+            });
+
+        } else if (ev.target.tagName === 'CODE') {
+            console.log('--> (*) Child clicked: ', ev.target.parentElement.id);
+
+        } else {
+            console.log('--> Child clicked: ', ev.target.id);
+
+            if (ev.target.previousElementSibling !== null) {
+                console.log('    previos element: ', ev.target.previousElementSibling.id)
+            }
+            if (ev.target.nextElementSibling !== null) {
+                console.log('    next element: ', ev.target.nextElementSibling.id)
+            }
+        }
+    });
+</script>
