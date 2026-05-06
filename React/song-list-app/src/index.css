@@ -1,0 +1,45 @@
+/* index.css */
+
+:root {
+  /* Paleta de colores pastel */
+  --bg-color: #fdf6f0;      /* Crema muy suave */
+  --accent-pastel: #d4eaf7;  /* Azul cielo pastel */
+  --text-color: #5d5d5d;     /* Gris suave para que no sea negro puro */
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Fondo con un degradado sutil */
+  background: linear-gradient(135deg, #fdf6f0 0%, #d4eaf7 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--text-color);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
